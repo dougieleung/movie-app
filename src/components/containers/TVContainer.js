@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import { Container, Center } from 'native-base';
 import TVShowsForm from '../forms/TVShowsForm';
 import { getTelevision } from '../services/api.js';
@@ -10,7 +10,7 @@ const TVContainer = ({ navigation }) => {
     const [isLoading, setIsLoading] = useState(false);
     const [tvShows, setTVShows] = useState([{}]);
 
-    useEffect(function displayDetails () {
+    useLayoutEffect(function displayDetails () {
         getTelevision('airing_today').then(
             shows => {
                 setTVShows(shows);

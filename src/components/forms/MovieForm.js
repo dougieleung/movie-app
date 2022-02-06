@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormControl, VStack, HStack, Select, CheckIcon} from 'native-base';
+import { FormControl, VStack, HStack, Select, CheckIcon } from 'native-base';
 
 const MovieForm = props => {
 
@@ -7,10 +7,10 @@ const MovieForm = props => {
 
     return (
        
-        <VStack space={2} width='90%' py={5} px={2}>
-             
-            <FormControl isRequired>
-         
+        <VStack space={2} width='90%' py={5} px={2}>     
+          
+            <FormControl isRequired>  
+               
                 <HStack width='100%' ml={12} alignItems='center'>
                     <Select width='80%' px={1} accessibilityLabel="Choose Movie" placeholder="Choose Movie" _selectedItem={{
                     bg:"black",
@@ -27,11 +27,10 @@ const MovieForm = props => {
                         <Select.Item label="Upcoming" value="upcoming" />
                     </Select>
                 </HStack>
-             
+            
             </FormControl>
-          
+       
         </VStack>
- 
     )
 }
 

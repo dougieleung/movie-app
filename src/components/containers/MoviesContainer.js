@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import { Container, Center } from 'native-base';
 import MovieForm from '../forms/MovieForm';
 import { getMovies } from '../services/api.js';
@@ -10,7 +10,7 @@ const MoviesContainer = ({ navigation }) => {
     const [isLoading, setIsLoading] = useState(false);
     const [movies, setMovies] = useState([{}]);
 
-    useEffect(function initialDisplay() {
+    useLayoutEffect(function initialDisplay() {
         getMovies('now_playing').then(
             movies => {
                 setMovies(movies);
@@ -32,7 +32,7 @@ const MoviesContainer = ({ navigation }) => {
     }
 
     return (
-        <Container ml={-6} >
+        <Container ml={-7} >
             <Center>
             <MovieForm onValueChange={handleValueChange} />
             {isLoading ? <Loading/> : <ShowsList navigation={navigation} shows={movies} />}
