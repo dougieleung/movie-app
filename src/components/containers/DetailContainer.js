@@ -19,7 +19,7 @@ const DetailContainer = ({ navigation, route }) => {
         <Box width='100%'>
                 <VStack>
                 <Center>
-                    <Text fontWeight="bold"  fontSize={20}>{details.original_title}</Text>
+                    <Text py={5} fontWeight="bold"  fontSize={20}>{details.original_title}</Text>
                     <Image alt={`"${details.original_title}"`} source={{ uri: `https://image.tmdb.org/t/p/original${details.poster_path}` }} size={'250'} ></Image>
                     <Text py={5} px={10} >
                     {details.overview}
