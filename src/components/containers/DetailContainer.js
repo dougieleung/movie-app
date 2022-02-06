@@ -7,7 +7,7 @@ const DetailContainer = ({ navigation, route }) => {
     const [details, setDetails] = useState({});
     const { type, id } = route;
 
-    useEffect(displayDetails = () => {
+    useEffect(function displayDetails () {
     getDetails(route.params.type, route.params.id).then(
         data => {
             setDetails(data);

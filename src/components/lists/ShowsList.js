@@ -6,7 +6,6 @@ const ShowsList = props => {
     const { shows, navigation } = props
     return (
         <>
-        {shows ? (
         <FlatList
         data={shows}
         renderItem={({ item }) => <ShowCard
@@ -19,7 +18,7 @@ const ShowsList = props => {
         navigation={navigation}
         />}
         keyExtractor={item => item.id}
-        />) : "" }
+        /> 
         </>
     )
 }

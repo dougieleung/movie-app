@@ -5,6 +5,9 @@ const ShowCard = props => {
     const { type, id, image, name, popularity, releaseDate, navigation } = props;
 
     return (
+        <>
+        {id !== undefined ?
+        (<>
         <Box pb={2} mb={2} >
             <HStack width='100%' alignItems='center'>
                 <Box width='30%'>
@@ -23,6 +26,8 @@ const ShowCard = props => {
                 </Box>
             </HStack>
         </Box>
+        </>) : <Text></Text>}
+        </>
     )
 }
 

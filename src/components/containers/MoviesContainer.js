@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Center } from 'native-base';
 import MovieForm from '../forms/MovieForm';
 import { getMovies } from '../services/api.js';
@@ -9,6 +9,15 @@ const MoviesContainer = ({ navigation }) => {
     
     const [isLoading, setIsLoading] = useState(false);
     const [movies, setMovies] = useState([{}]);
+
+    useEffect(function initialDisplay() {
+        getMovies('now_playing').then(
+            movies => {
+                setMovies(movies);
+            }
+        ).catch(error => console.log('error', error));
+        },[]);
+
 
     const handleValueChange = type => {
    

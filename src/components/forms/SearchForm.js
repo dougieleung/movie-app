@@ -45,7 +45,7 @@ const SearchForm = props => {
                     </Select>
                     <Button onPress={onSubmit} height={9} startIcon={<Icon size={5} as={Ionicons} name='ios-search' />}>Search</Button>
                 </HStack>
-                <Text mx={1} my={2} fontSize={12}>
+                <Text mx={1} my={2} fontSize={15}>
                 Please select a search type
                 </Text>
             </FormControl>
