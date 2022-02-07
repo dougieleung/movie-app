@@ -5,7 +5,7 @@ import { getDetails } from '../services/api.js';
 const DetailContainer = ({ navigation, route }) => {
     
     const [details, setDetails] = useState({});
-    const { type, id } = route;
+    const { image, type, id } = route;
 
     useLayoutEffect(function displayDetails() {
     getDetails(route.params.type, route.params.id).then(
@@ -20,7 +20,7 @@ const DetailContainer = ({ navigation, route }) => {
                 <VStack>
                 <Center>
                     <Text py={5} fontWeight="bold"  fontSize={20}>{details.original_title}</Text>
-                    <Image alt={`"${details.original_title}"`} source={{ uri: `https://image.tmdb.org/t/p/original${details.poster_path}` }} size={'250'} />
+                    <Image alt={`"${details.original_title}"`} source={{ uri: `https://image.tmdb.org/t/p/original${route.params.image}` }} size={'250'} />
                     <Text py={5} px={10} >
                     {details.overview}
                     </Text>

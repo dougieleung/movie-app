@@ -20,7 +20,7 @@ const ShowCard = props => {
                         <Text>Release Date: {releaseDate}</Text>
                         <Button
                             onPress={()=>
-                            navigation.navigate('Detail',{name, type, id})
+                            navigation.navigate('Detail',{name, image, type, id})
                             }>More Details</Button>
                     </VStack>
                 </Box>
