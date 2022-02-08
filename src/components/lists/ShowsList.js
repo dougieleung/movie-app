@@ -17,8 +17,7 @@ const ShowsList = props => {
         releaseDate={item.release_date}
         navigation={navigation}
         />}
-        keyExtractor={item => item.imdb_id}
-        /> 
+        keyExtractor={item => item.imdb_id} />
         </>
     )
 }

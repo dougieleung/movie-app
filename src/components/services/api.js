@@ -4,7 +4,7 @@ import { APP_KEY, BASE_URL } from '../config/api_config.js';
 
 //Now Playing, Popular, Top Rated, Upcoming
 
-export const getMovies = async choice => {
+export const getMovies = async (choice) => {
 
     try {
     const url = `${BASE_URL}/movie/${choice}?api_key=${APP_KEY}&language=en-US&page=1`;
