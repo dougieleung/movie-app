@@ -82,8 +82,6 @@ export const getDetails = async (type, id) => {
 
     const showDetails = response;
 
-    console.log(showDetails);
-
     return showDetails;
 
     } catch (error) {
