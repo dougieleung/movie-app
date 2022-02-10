@@ -10,7 +10,7 @@ const TVShowsForm = props => {
             <FormControl isRequired>
                 <HStack width='100%' ml={12} alignItems='center' alignItems='center'>
                     <Select width='80%' px={1} accessibilityLabel="Choose TV Show" placeholder="Choose TV Show" _selectedItem={{
-                    bg: "black",
+                    bg: 'contrastThreshold',
                     endIcon: <CheckIcon size={5} />
                     }} 
                     mt={1}

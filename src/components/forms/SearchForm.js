@@ -17,7 +17,7 @@ const SearchForm = props => {
                 <Input
                     placeholder='i.e. James Bond. CSI'
                     variant='filled'
-                    bg='gray.200'
+                    bg='contrastThreshold'
                     px={3}
                     width='135%'
                     InputLeftElement={

@@ -13,7 +13,7 @@ const MovieForm = props => {
                
                 <HStack width='100%' ml={12} alignItems='center'>
                     <Select width='80%' px={1} accessibilityLabel="Choose Movie" placeholder="Choose Movie" _selectedItem={{
-                    bg:"black",
+                    bg:'contrastThreshold',
                     endIcon: <CheckIcon size={5} />
                     }} 
                     mt={1}

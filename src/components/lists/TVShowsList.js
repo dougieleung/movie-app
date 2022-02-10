@@ -9,7 +9,7 @@ const ShowsList = props => {
         {shows ? 
         (<FlatList
         data={shows}
-        renderItem={({ item }) => <ShowCard
+        renderItem={({ item, index }) => <ShowCard
         type='tv'
         id={item.id}
         image={item.poster_path}
@@ -19,6 +19,7 @@ const ShowsList = props => {
         navigation={navigation}
         />}
         keyExtractor={item => item.id}
+        showsVerticalScrollIndicator={false}
         />) : ""}
         </>
     )
